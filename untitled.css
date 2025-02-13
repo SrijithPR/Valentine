@@ -1,0 +1,116 @@
+/* Pink Background */
+body {
+    overflow: hidden;
+    background-color: #ffc0cb;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+}
+
+/* Floating Toys and Teddies */
+.floating-toy {
+    position: fixed;
+    bottom: -50px;
+    animation: floatAround infinite;
+    pointer-events: none;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+/* Animation for Floating Toys */
+@keyframes floatAround {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-50vh) rotate(180deg);
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Container Design */
+.container {
+    background: black;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    width: 320px;
+    margin: auto;
+    margin-top: 20vh;
+    border: 3px solid #ff6f91;
+    z-index: 1;
+}
+
+/* Button Area */
+.buttons {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Yes Button Style */
+#yesBtn {
+    background: #ff6f91;
+    color: white;
+}
+
+#yesBtn:hover {
+    background: #ff3e6c;
+    transform: scale(1.1);
+}
+
+/* No Button Style */
+#noBtn {
+    background: #f75c03;
+    color: white;
+    position: relative;
+}
+
+#noBtn:hover {
+    background: #e04800;
+    transform: scale(1.1);
+}
+
+/* Message Styling */
+#message {
+    font-size: 20px;
+    color: #ff6f91;
+    margin-top: 20px;
+    min-height: 40px;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    button {
+        width: 100px;
+        font-size: 16px;
+    }
+
+    #message {
+        font-size: 18px;
+    }
+}
